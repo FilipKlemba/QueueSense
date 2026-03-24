@@ -1,0 +1,157 @@
+#modal-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DFDBD6;
+    padding: 1em 2em 1em 2em;
+    box-sizing: border-box;
+}
+
+#modal-header-left{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+#modal-header-name{
+    font-family: var(--font-secondary),serif;
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+#close-modal-bttn{
+    background-color: #F5F2EC;
+    border-radius: 9999px;
+    border: none;
+    height: 2em;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#modal-header-category{
+    color: var(--font-color-secondary);
+    font-size: .9em;
+}
+
+#modal-bar-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em 1em 2em;
+    box-sizing: border-box;
+    /*height: 40%;*/
+    gap: .5em;
+}
+
+
+#modal-estimated-label-inner{
+    font-size: 4em;
+    font-family: var(--font-secondary),serif;
+}
+
+#modal-bar-wrapper{
+    width: 100%;
+    height: .5em;
+    position: relative;
+}
+
+#modal-bar{
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+#modal-bar-track{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #EFECE4;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+}
+
+#modal-bar-threshold-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-bar-threshold{
+    font-size: .8em;
+    color: var(--font-color-secondary);
+}
+
+#modal-statistics-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 1em 0 1em;
+    box-sizing: border-box;
+}
+
+.modal-statistic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    background-color: #F5F2EC;
+    padding:1em 2em 1em 2em;
+    border-radius: 20px;
+}
+
+.modal-statistic-title{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: var(--font-secondary),serif;
+}
+
+.modal-statistic-subtitle{
+    font-size: .8em;
+    color: var(--font-color-secondary);
+}
+
+#modal-reports-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em 1em 2em;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    flex: 1;        /* add this — takes up remaining height */
+    min-height: 0; /* add this — critical, without it flex children won't shrink */
+}
+
+#modal-reports-title{
+    color: var(--font-color-secondary);
+    font-size: .8em;
+}

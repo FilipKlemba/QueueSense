@@ -1,0 +1,61 @@
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #E6E4E2;
+}
+
+#queue-sense-logo{
+    font-size: 2em;
+    font-family: var(--font-secondary),serif;
+}
+
+#queue-sense-logo-pt-2{
+    color: var(--font-color-accent);
+}
+
+#header-navbar{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: flex-end;
+}
+
+#header-navbar>a{
+    text-decoration: none;
+    color: var(--font-color-main);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+}
+
+#header-navbar>a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+}
+
+#add-report-bttn-header{
+    background-color: var(--font-color-main);
+    border: none;
+    color:white !important;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: .9em;
+    transition: all .3s ease-in-out;
+
+}
+
+#add-report-bttn:hover{
+    background-color: var(--font-color-main);
+    opacity: .8;
+}

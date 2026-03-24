@@ -1,0 +1,25 @@
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    box-sizing: border-box;
+    border-top: 1px solid #DFDBD6;
+}
+
+#footer-label-1{
+    font-size: 1.3em;
+    font-family: var(--font-secondary),serif;
+    /*font-weight: bold;*/
+}
+
+#footer-label-styled{
+    color: var(--font-color-accent);
+}
+
+#footer-label-2{
+    font-size: .7em;
+    color: var(--font-color-secondary);
+}

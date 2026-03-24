@@ -1,0 +1,21 @@
+html,body,#root,.App{
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-main),serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --font-color-main: rgb(26, 24, 20);
+    --font-color-secondary: rgba(26, 24, 20, 0.66);
+    --font-color-accent:#1D7A5A;
+    --bg-color-main:#F5F2EC;
+    --font-main:"DM Sans";
+    --font-secondary:"DM Serif Display";
+}

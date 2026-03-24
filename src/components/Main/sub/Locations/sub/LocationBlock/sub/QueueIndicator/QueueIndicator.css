@@ -1,0 +1,43 @@
+.location-block-queue-indicator{
+    padding: .25em .25em .25em 1.5em;
+    position: relative;
+    border-radius: 10px;
+    font-size: .8em;
+}
+
+.location-block-queue-indicator::before {
+    position: absolute;
+    content: "";
+    height: 40%;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    left: .5em;
+    top: 30%;
+}
+
+.indicator--short{
+    background-color: #E3F5ED;
+    color: #2FA876;
+}
+
+.indicator--medium{
+    background-color: #FDF0DC;
+    color: #F5A623;
+}
+
+.indicator--long{
+    background-color: #FDECEA;
+    color: #D94035;
+}
+
+.indicator--short::before{
+    background-color: #2FA876;
+}
+
+.indicator--medium::before{
+    background-color: #F5A623;
+}
+
+.indicator--long::before{
+    background-color: #D94035;
+}

@@ -1,0 +1,18 @@
+.location-filter{
+    background-color: white;
+    border-radius: 15px;
+    padding: .25em 1em .25em 1em;
+    cursor: pointer;
+    border: 1px solid rgba(26,24,20,0.18);
+    transition: all .3s ease-in-out;
+}
+
+.location-filter:hover{
+    background-color: black;
+    color: white;
+}
+
+.location-filter--active{
+    background-color: black;
+    color: white;
+}

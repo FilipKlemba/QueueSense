@@ -1,0 +1,27 @@
+.report-estimated-time-bttn,
+.report-estimated-time-bttn--active{
+    border: 1px solid #403E3B;
+    border-radius: 15px;
+
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 1em 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.report-estimated-time-bttn{
+    background-color: #2A2825;
+    color: #8D8C8A;
+}
+
+.report-estimated-time-bttn:hover{
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.report-estimated-time-bttn--active{
+    background-color: var(--font-color-accent);
+    color: white;
+}

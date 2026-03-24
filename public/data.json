@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Central Post Office",
+    "category": "Post Office",
+    "icon": "📬",
+    "reports": [
+      { "time": 25, "timestamp": 5 },
+      { "time": 30, "timestamp": 12 },
+      { "time": 20, "timestamp": 18 },
+      { "time": 28, "timestamp": 25 },
+      { "time": 22, "timestamp": 31 }
+    ]
+  },
+  {
+    "name": "University Registrar",
+    "category": "University",
+    "icon": "🎓",
+    "reports": [
+      { "time": 35, "timestamp": 3 },
+      { "time": 28, "timestamp": 9 },
+      { "time": 40, "timestamp": 17 },
+      { "time": 31, "timestamp": 24 },
+      { "time": 25, "timestamp": 30 }
+    ]
+  },
+  {
+    "name": "Student Cafeteria",
+    "category": "Cafeteria",
+    "icon": "🍽️",
+    "reports": [
+      { "time": 6, "timestamp": 2 },
+      { "time": 8, "timestamp": 7 },
+      { "time": 5, "timestamp": 14 },
+      { "time": 7, "timestamp": 20 },
+      { "time": 4, "timestamp": 28 }
+    ]
+  },
+  {
+    "name": "City Hall Counter 3",
+    "category": "Government",
+    "icon": "🏛️",
+    "reports": [
+      { "time": 22, "timestamp": 4 },
+      { "time": 18, "timestamp": 11 },
+      { "time": 25, "timestamp": 19 },
+      { "time": 20, "timestamp": 26 },
+      { "time": 24, "timestamp": 33 }
+    ]
+  },
+  {
+    "name": "Health Center Reception",
+    "category": "Medical",
+    "icon": "🏥",
+    "reports": [
+      { "time": 40, "timestamp": 6 },
+      { "time": 32, "timestamp": 13 },
+      { "time": 38, "timestamp": 20 },
+      { "time": 35, "timestamp": 27 },
+      { "time": 30, "timestamp": 34 }
+    ]
+  },
+  {
+    "name": "Library Info Desk",
+    "category": "University",
+    "icon": "📚",
+    "reports": [
+      { "time": 4, "timestamp": 1 },
+      { "time": 6, "timestamp": 8 },
+      { "time": 3, "timestamp": 15 },
+      { "time": 5, "timestamp": 22 },
+      { "time": 4, "timestamp": 29 }
+    ]
+  },
+  {
+    "name": "Faculty of Engineering",
+    "category": "University",
+    "icon": "⚙️",
+    "reports": [
+      { "time": 20, "timestamp": 3 },
+      { "time": 25, "timestamp": 10 },
+      { "time": 18, "timestamp": 16 },
+      { "time": 22, "timestamp": 23 },
+      { "time": 15, "timestamp": 30 }
+    ]
+  },
+  {
+    "name": "Tax Office Desk A",
+    "category": "Government",
+    "icon": "📋",
+    "reports": [
+      { "time": 40, "timestamp": 7 },
+      { "time": 35, "timestamp": 14 },
+      { "time": 42, "timestamp": 21 },
+      { "time": 37, "timestamp": 28 },
+      { "time": 60, "timestamp": 35 },
+      { "time": 60, "timestamp": 35 },
+      { "time": 60, "timestamp": 35 },
+      { "time": 60, "timestamp": 35 }
+    ]
+  },
+  {
+    "name": "Campus Café North",
+    "category": "Cafeteria",
+    "icon": "☕",
+    "reports": [
+      { "time": 7, "timestamp": 2 },
+      { "time": 5, "timestamp": 9 },
+      { "time": 8, "timestamp": 16 },
+      { "time": 6, "timestamp": 23 },
+      { "time": 4, "timestamp": 30 }
+    ]
+  }
+]

@@ -1,0 +1,82 @@
+#add-report-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #1A1814;
+    padding: 2em;
+    box-sizing: border-box;
+    border-radius: 30px;
+
+}
+
+#add-report-left,
+#add-report-right{
+    display: flex;
+    flex-direction: column;
+}
+
+#add-report-left{
+    width: 60%;
+}
+
+#add-report-right{
+    width: 40%;
+    flex-direction: column;
+    gap:1em
+}
+
+#add-report-left>h1{
+    font-family: var(--font-secondary),serif;
+    color: white;
+}
+
+#add-report-styled{
+    color: var(--font-color-accent);
+    font-style: italic;
+}
+
+#add-report-left-label,
+#add-report-right-label-1,
+#add-report-right-label-2{
+    color: rgba(255,255,255,0.55);
+}
+
+#add-report-right-label-1,
+#add-report-right-label-2{
+    font-size: .8em;
+}
+
+#add-report-select{
+    background-color: #2A2825;
+    padding: .75em;
+    border-radius: 15px;
+    color: white;
+}
+
+#add-report-right-bttns-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-report{
+    background-color: #FDFCF9;
+    color: black;
+    padding: 1em 0 1em 0;
+    border-radius: 15px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+#submit-report:hover{
+    opacity: .9;
+}
+
+#submit-report:disabled{
+    opacity: .3;
+    cursor: not-allowed;
+}
+

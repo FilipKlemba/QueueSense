@@ -1,0 +1,48 @@
+.modal-report-container{
+    width: 100%;
+    height: 5em;
+    min-height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DFDBD6;
+}
+
+.modal-report-left{
+    display: flex;
+    flex-direction: column;
+    gap:.25em;
+}
+
+.modal-report-time{
+    font-size: .9em;
+}
+
+.modal-report-timestamp{
+    font-size: .7em;
+    color: var(--font-color-secondary);
+}
+
+.modal-report-right>*{
+    font-size: .8em;
+    padding: .25em .5em .25em .5em;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.modal-indicator--short{
+    background-color: #E3F5ED;
+    color: #2FA876;
+}
+
+.modal-indicator--medium{
+    background-color: #FDF0DC;
+    color: #F5A623;
+}
+
+.modal-indicator--long{
+    background-color: #FDECEA;
+    color: #D94035;
+}
+
