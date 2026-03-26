@@ -2,7 +2,7 @@ import './AddReport.css';
 import {useEffect, useState} from "react";
 import EstimatedTimeButton from "./sub/EstimatedTimeButton/EstimatedTimeButton.jsx";
 
-export default function AddReport() {
+export default function AddReport({language}) {
     const [report,setReport]= useState({
         location:"",
         waitTime:0
@@ -38,7 +38,7 @@ export default function AddReport() {
             const data = await response.json();
 
             data.forEach((item) => {
-                names.push(item.name);
+                names.push(item.name[language]);
             })
             setLocationsName(names);
         }
@@ -47,25 +47,25 @@ export default function AddReport() {
 
     return <div id='add-report-container'>
         <div id='add-report-left'>
-            <h1>Help the <br></br><span id='add-report-styled'>community</span></h1>
-            <span id='add-report-left-label'>Submit your current waiting time experience. Your report updates the live average immediately and helps others plan their visit.</span>
+            <h1>{language==="en" ? "Help the" : "Pomóż"} <br></br><span id='add-report-styled'>{language==="en" ? "community" : "społeczeństwu"}</span></h1>
+            <span id='add-report-left-label'>{language==="en" ? "Submit your current waiting time experience. Your report updates the live average immediately and helps others plan their visit." : "Prześlij swoje aktualne doświadczenie czasu oczekiwania. Twój raport natychmiast aktualizuje średnią na żywo i pomaga innym zaplanować wizytę.\n"}</span>
         </div>
         <div id='add-report-right'>
-            <span id='add-report-right-label-1'>LOCATION</span>
+            <span id='add-report-right-label-1'>{language==="en" ? "LOCATION" : "LOKALIZACJA"}</span>
             <select id='add-report-select' name="time" onChange={(e)=>setLocation(e.target.value)}>
-                <option value=''>Select a location...</option>
+                <option value=''>{language==="en" ? "Select a location..." : "Wybierz lokalizacje..."}</option>
                 {locationsName.map(name=>{
                     return <option key={name} value={name}>{name}</option>
                 })}
             </select>
-            <div id='add-report-right-label-2'>YOUR ESTIMATED WAIT</div>
+            <div id='add-report-right-label-2'>{language==="en" ? "YOUR ESTIMATED WAIT" : "TWÓJ CZAS OCZEKIWANIA"}</div>
             <div id='add-report-right-bttns-container'>
                 {time.map(time=>{
                     return <EstimatedTimeButton time={time} report={report} setWaitTime={setWaitTime}/>
                 })}
             </div>
             <button id='submit-report' disabled={!isReportValid}>
-                Submit report
+                {language==="en" ? "Submit report" : "Wyślij zgłoszenie"}
             </button>
 
         </div>

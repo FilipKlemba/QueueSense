@@ -15,7 +15,7 @@
     width: 40%;
 }
 
-#hero-label-left-1{
+.hero-label-left-1{
     font-size: 4em;
     margin: 0;
     font-family: var(--font-secondary),serif;
@@ -23,7 +23,7 @@
 
 
 
-#hero-label-left-1-green{
+.hero-label-left-1-green{
     color: var(--font-color-accent);
     font-style: italic;
 }

@@ -1,67 +1,90 @@
 import './LocationBlock.css';
 import QueueIndicator from "./sub/QueueIndicator/QueueIndicator.jsx";
 
-export default function LocationBlock({location,setLocationToDisplay}) {
+export default function LocationBlock({ location, setLocationToDisplay, language }) {
 
+    const COLOR_MAP = {
+        short: 'green',
+        medium: 'orange',
+        long: 'red'
+    };
+
+    const LABEL_MAP = {
+        short: { pl: "Krótka", en: "Short" },
+        medium: { pl: "Średnia", en: "Medium" },
+        long: { pl: "Długa", en: "Long" }
+    };
 
     const calculateEstimatedTime = () => {
-        let estimatedTime = 0;
-        location.reports.forEach(report => {
-            estimatedTime += report.time;
-        })
-        return estimatedTime / location.reports.length;
-    }
+        if (!location.reports.length) return 0;
 
-    const getTimePercentage = () => (calculateEstimatedTime() / 60) * 100;
+        const total = location.reports.reduce((acc, report) => acc + report.time, 0);
+        return Math.round(total / location.reports.length);
+    };
+
+    const estimatedTime = calculateEstimatedTime();
+    const timePercentage = (estimatedTime / 60) * 100;
 
     const getTimeBracket = () => {
-        const time = getTimePercentage();
-        if (time <= 30) return 'short';
-        if (time <= 60) return 'medium';
+        if (timePercentage <= 30) return 'short';
+        if (timePercentage <= 60) return 'medium';
         return 'long';
     };
 
-    const COLOR_MAP = {short: 'green', medium: 'orange', long: 'red'};
-    const LABEL_MAP = {short: 'Short', medium: 'Medium', long: 'Long'};
+    const bracket = getTimeBracket();
 
-    const getColorByTime = () => COLOR_MAP[getTimeBracket()];
-    const getQueueTypeByTime = () => LABEL_MAP[getTimeBracket()];
+    const queueMeta = {
+        color: COLOR_MAP[bracket],
+        label: LABEL_MAP[bracket][language]
+    };
 
-    return <div className="location-block" onClick={() => setLocationToDisplay(location)}>
-        <div className="location-block-top">
-            <div className='location-block-icon'>
-                {location.icon}
+    return (
+        <div className="location-block" onClick={() => setLocationToDisplay(location)}>
+            <div className="location-block-top">
+                <div className='location-block-icon'>
+                    {location.icon}
+                </div>
+
+                <QueueIndicator type={queueMeta.label} language={language}/>
             </div>
 
-
-            <QueueIndicator type={getQueueTypeByTime()} />
-
-
-        </div>
-        <span className='location-block-title'>
-            {location.name}
-        </span>
-        <span className='location-block-category'>
-            {location.category}
-        </span>
-        <span className='location-block-time-estimated'>
-            <span className='estimated-time'>
-                {calculateEstimatedTime()}
+            <span className='location-block-title'>
+                {location.name[language]}
             </span>
-            <span className='estimated-time-label'> min estimated</span>
-        </span>
-        <div className='location-block-time-bar-wrapper'>
-            <div className='location-block-time-bar'
-                 style={{width: `${(calculateEstimatedTime() / 60) * 100}%`, backgroundColor: getColorByTime()}}></div>
-            <div className='location-block-time-bar-threshold'></div>
-        </div>
-        <div className='location-block-bottom'>
-            <span className='location-block-recent-reports'>
-                {location.reports.length} recent reports
+
+            <span className='location-block-category'>
+                {location.category[language]}
             </span>
-            <button className='location-block-details-bttn'>
-                View details →
-            </button>
+
+            <span className='location-block-time-estimated'>
+                <span className='estimated-time'>
+                    {estimatedTime}
+                </span>
+                <span className='estimated-time-label'>
+                    {language === "en" ? " min estimated" : " min szacowanych"}
+                </span>
+            </span>
+
+            <div className='location-block-time-bar-wrapper'>
+                <div
+                    className='location-block-time-bar'
+                    style={{
+                        width: `${timePercentage}%`,
+                        backgroundColor: queueMeta.color
+                    }}
+                />
+                <div className='location-block-time-bar-threshold'></div>
+            </div>
+
+            <div className='location-block-bottom'>
+                <span className='location-block-recent-reports'>
+                    {location.reports.length} {language === "en" ? "recent reports" : "niedawnych zgłoszeń"}
+                </span>
+
+                <button className='location-block-details-bttn'>
+                    {language === "en" ? "View details →" : "Sprawdź szczegóły →"}
+                </button>
+            </div>
         </div>
-    </div>;
+    );
 }

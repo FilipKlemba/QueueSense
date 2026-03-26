@@ -7,11 +7,13 @@ import Modal from "./components/Main/sub/Modal/Modal.jsx";
 
 function App() {
     const [locationToDisplay, setLocationToDisplay] = useState(null);
+    const [language,setLanguage] = useState("pl");
+
     return <div className='App'>
-        <Header/>
-        <Main setLocationToDisplay={setLocationToDisplay} />
+        <Header language={language} setLanguage={setLanguage}/>
+        <Main setLocationToDisplay={setLocationToDisplay} language={language}/>
         <Footer/>
-        {locationToDisplay!==null && <Modal locationToDisplay={locationToDisplay} setLocationToDisplay={setLocationToDisplay} />}
+        {locationToDisplay!==null && <Modal locationToDisplay={locationToDisplay} setLocationToDisplay={setLocationToDisplay} language={language}/>}
     </div>;
 
 }

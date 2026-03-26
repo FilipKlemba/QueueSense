@@ -1,7 +1,7 @@
 [
   {
-    "name": "Central Post Office",
-    "category": "Post Office",
+    "name": { "pl": "Poczta Główna", "en": "Central Post Office" },
+    "category": { "pl": "Poczta", "en": "Post Office" },
     "icon": "📬",
     "reports": [
       { "time": 25, "timestamp": 5 },
@@ -12,8 +12,8 @@
     ]
   },
   {
-    "name": "University Registrar",
-    "category": "University",
+    "name": { "pl": "Dziekanat", "en": "University Registrar" },
+    "category": { "pl": "Uniwersytet", "en": "University" },
     "icon": "🎓",
     "reports": [
       { "time": 35, "timestamp": 3 },
@@ -24,8 +24,8 @@
     ]
   },
   {
-    "name": "Student Cafeteria",
-    "category": "Cafeteria",
+    "name": { "pl": "Stołówka Studencka", "en": "Student Cafeteria" },
+    "category": { "pl": "Stołówka", "en": "Cafeteria" },
     "icon": "🍽️",
     "reports": [
       { "time": 6, "timestamp": 2 },
@@ -36,8 +36,8 @@
     ]
   },
   {
-    "name": "City Hall Counter 3",
-    "category": "Government",
+    "name": { "pl": "Urząd Miasta – Stanowisko 3", "en": "City Hall Counter 3" },
+    "category": { "pl": "Urząd", "en": "Government" },
     "icon": "🏛️",
     "reports": [
       { "time": 22, "timestamp": 4 },
@@ -48,8 +48,8 @@
     ]
   },
   {
-    "name": "Health Center Reception",
-    "category": "Medical",
+    "name": { "pl": "Recepcja Przychodni", "en": "Health Center Reception" },
+    "category": { "pl": "Medyczne", "en": "Medical" },
     "icon": "🏥",
     "reports": [
       { "time": 40, "timestamp": 6 },
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "name": "Library Info Desk",
-    "category": "University",
+    "name": { "pl": "Punkt Informacyjny Biblioteki", "en": "Library Info Desk" },
+    "category": { "pl": "Uniwersytet", "en": "University" },
     "icon": "📚",
     "reports": [
       { "time": 4, "timestamp": 1 },
@@ -72,8 +72,8 @@
     ]
   },
   {
-    "name": "Faculty of Engineering",
-    "category": "University",
+    "name": { "pl": "Wydział Inżynierii", "en": "Faculty of Engineering" },
+    "category": { "pl": "Uniwersytet", "en": "University" },
     "icon": "⚙️",
     "reports": [
       { "time": 20, "timestamp": 3 },
@@ -84,8 +84,8 @@
     ]
   },
   {
-    "name": "Tax Office Desk A",
-    "category": "Government",
+    "name": { "pl": "Urząd Skarbowy – Stanowisko A", "en": "Tax Office Desk A" },
+    "category": { "pl": "Urząd", "en": "Government" },
     "icon": "📋",
     "reports": [
       { "time": 40, "timestamp": 7 },
@@ -99,8 +99,8 @@
     ]
   },
   {
-    "name": "Campus Café North",
-    "category": "Cafeteria",
+    "name": { "pl": "Kawiarnia Kampusowa Północ", "en": "Campus Café North" },
+    "category": { "pl": "Stołówka", "en": "Cafeteria" },
     "icon": "☕",
     "reports": [
       { "time": 7, "timestamp": 2 },

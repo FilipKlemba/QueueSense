@@ -1,8 +1,8 @@
 import './QueueIndicator.css';
 
-export default function QueueIndicator({type}) {
+export default function QueueIndicator({type,language}) {
 
     return <div className={`location-block-queue-indicator indicator--${type.toLowerCase()}`}>
-        {type} queue
+        {type} {language==="en" ? "queue" : "kolejka"}
     </div>
 }
